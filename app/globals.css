@@ -3,25 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+	/* BACKGROUND COLOR */
+	--dark-background: #202733;
+	--light-background: #f6f8ff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+	/* TEXT COLOR */
+	--light-text: #cee3e9;
+	--dark-text: #51545a;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	/* CARD BACKGROUND COLOR */
+	--dark-card: #313A48;
+	--light-card: #fefefe;
+
+	/* ACCENT COLOR */
+	--accent: #53ffaa;
+  --light-accent: #26b36c;
+
+	/* BOX SHADOWS */
+	--primary-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  --btn-hover: 0px 0px 40px #53FFAA;
 }
