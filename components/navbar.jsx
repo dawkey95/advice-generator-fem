@@ -25,6 +25,7 @@ const Navbar = () => {
 						</svg>
 					)}
 					<Switch.Root
+						aria-label='Dark mode switch'
 						className='w-[42px] h-[25px] bg-darkCard rounded-full relative shadow-[0_0px_5px] focus:shadow-[0_0_0_2px] focus:shadow-darkCard data-[state=checked]:bg-darkCard outline-none cursor-default'
 						id='dark-mode-switch'
 						onCheckedChange={() => {
