@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useMediaQuery } from '@react-hook/media-query';
 
 const AdviceCard = () => {
@@ -17,7 +17,9 @@ const AdviceCard = () => {
 		setId(id);
 	};
 
-	window.onload = fetchAdvice();
+	useEffect(() => {
+		window.onload = fetchAdvice();
+	});
 
 	return (
 		<div className='flex flex-col w-full my-[7.5rem] lg:my-[14rem] card bg-lightCard dark:bg-darkCard shadow-primaryShadow dark:shadow-none'>
