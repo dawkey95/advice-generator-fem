@@ -27,8 +27,8 @@ const AdviceCard = () => {
 				<h1 className='justify-center card-title text-[0.6875rem] tracking-widest text-lightAccent dark:text-accent mb-6'>
 					{`ADVICE #${id}`}
 				</h1>
-				<p className='mb-6 text-[1.5rem] text-darkText dark:text-lightText'>
-					{advice}
+				<p className='mb-6 text-[1.5rem] font-extrabold text-darkText dark:text-lightText'>
+					{`"${advice}"`}
 				</p>
 				{lg ? (
 					<Image
