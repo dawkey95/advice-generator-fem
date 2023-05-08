@@ -32,6 +32,7 @@ const AdviceCard = () => {
 				</p>
 				{lg ? (
 					<Image
+						priority
 						className='mb-8'
 						src={'/images/pattern-divider-desktop.svg'}
 						width={444}
@@ -40,6 +41,7 @@ const AdviceCard = () => {
 					/>
 				) : (
 					<Image
+						priority
 						className='mb-8'
 						src={'/images/pattern-divider-mobile.svg'}
 						width={295}
