@@ -9,6 +9,7 @@ const manrope = Manrope({
 export const metadata = {
 	title: 'Advice Generator | FEM',
 	description: 'Created by Dawid Keyser',
+	content: ''
 };
 
 export default function RootLayout({ children }) {

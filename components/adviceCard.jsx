@@ -49,6 +49,8 @@ const AdviceCard = () => {
 				)}
 				<div className='absolute bottom-[-2rem] card-actions'>
 					<button
+						aria-label='Get Next Advice'
+						type='button'
 						onClick={fetchAdvice}
 						className='w-[64px] h-[64px] border-none rounded-full btn bg-accent hover:shadow-btnHover hover:bg-accent'
 					>
