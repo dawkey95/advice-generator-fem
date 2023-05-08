@@ -3,12 +3,12 @@
 import axios from 'axios';
 import Image from 'next/image';
 import { useState } from 'react';
-import { useBreakpoint } from 'use-tailwind';
+import { useMediaQuery } from '@react-hook/media-query';
 
 const AdviceCard = () => {
 	const [advice, setAdvice] = useState('');
 	const [id, setId] = useState('');
-	const breakpoint = useBreakpoint;
+	const lg = useMediaQuery('(min-width: 1024px)');
 
 	const fetchAdvice = async () => {
 		const response = await axios.get('https://api.adviceslip.com/advice');
@@ -17,7 +17,7 @@ const AdviceCard = () => {
 		setId(id);
 	};
 
-  window.onload = fetchAdvice();
+	window.onload = fetchAdvice();
 
 	return (
 		<div className='flex flex-col w-full my-[7.5rem] lg:my-[14rem] card bg-lightCard dark:bg-darkCard shadow-primaryShadow dark:shadow-none'>
@@ -28,19 +28,19 @@ const AdviceCard = () => {
 				<p className='mb-6 text-[1.5rem] text-darkText dark:text-lightText'>
 					{advice}
 				</p>
-				{breakpoint === 'lg' ? (
+				{lg ? (
 					<Image
 						className='mb-8'
-						src={'/images/pattern-divider-mobile.svg'}
-						width={295}
+						src={'/images/pattern-divider-desktop.svg'}
+						width={444}
 						height={16}
 						alt=''
 					/>
 				) : (
 					<Image
 						className='mb-8'
-						src={'/images/pattern-divider-desktop.svg'}
-						width={444}
+						src={'/images/pattern-divider-mobile.svg'}
+						width={295}
 						height={16}
 						alt=''
 					/>
